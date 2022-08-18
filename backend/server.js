@@ -9,7 +9,8 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({extended : false})); 
 
-app.use("/api/goals/" , require("./../backend/router/GoalsRoutes"));
+app.use("/api/goals/" , require("./../backend/routes/GoalsRoutes"));
+app.use("/api/users/" , require("../backend/routes/UserRoutes"));
 app.use(errorHandler);
 
 
